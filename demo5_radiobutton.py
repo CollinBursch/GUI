@@ -15,15 +15,15 @@ class KiloConverterGUI:
         self.radio_var.set(10)
 
         self.rb1 = tkinter.Radiobutton(
-            self.top_frame, text="Option1", variable=self.radio_var, value=1
+            self.top_frame, text="Option 1", variable=self.radio_var, value=1
         )
 
         self.rb2 = tkinter.Radiobutton(
-            self.top_frame, text="Option2", variable=self.radio_var, value=2
+            self.top_frame, text="Option 2", variable=self.radio_var, value=2
         )
 
         self.rb3 = tkinter.Radiobutton(
-            self.top_frame, text="Option3", variable=self.radio_var, value=3
+            self.top_frame, text="Option 3", variable=self.radio_var, value=3
         )
 
         # pack
@@ -33,11 +33,11 @@ class KiloConverterGUI:
         self.rb3.pack()
 
         # pack
-
+        # have to pack the frames too!
         self.top_frame.pack(side="top")
         self.bottom_frame.pack(side="top")
 
-        # have to pack the frames too!
+        
         self.ok_button = tkinter.Button(
             self.bottom_frame, text="OK", command=self.show_choice
         )
@@ -52,7 +52,7 @@ class KiloConverterGUI:
 
         self.ok_button.pack(side="left")
         self.reset_button.pack(side="left")
-        self.quit_button.pack(side="left")
+        self.quit_button.pack(side="top")
 
         tkinter.mainloop()
 
@@ -60,7 +60,6 @@ class KiloConverterGUI:
         tkinter.messagebox.showinfo(
             "Selection", "You have selection option" + str(self.radio_var.get())
         )
-
 
 kilo_conv = KiloConverterGUI()
 
