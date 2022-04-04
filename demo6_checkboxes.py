@@ -9,7 +9,7 @@ class MyGUI:
         self.top_frame = tkinter.Frame(self.main_window)
         self.bottom_frame = tkinter.Frame(self.main_window)
 
-        # create three IntVar objects to use wiht the checkboxes
+        # create three IntVar objects to use with the checkboxes
 
         self.cb_var1 = tkinter.IntVar()
         self.cb_var2 = tkinter.IntVar()
